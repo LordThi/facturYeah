@@ -1,10 +1,12 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Servir les fichiers statiques
-app.use(express.static('public'));
+app.get('/', (req, res: Response) => {
+    res.send('Hello World from Express and TypeScript!');
+});
 
-// Autres routes et configuration du serveur ici
-
-export default app;
+app.listen(PORT, () => {
+    console.log(`Hello, Server running on http://localhost:${PORT}`);
+});

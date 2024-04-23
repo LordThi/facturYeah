@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",         // Compiler vers une version moderne d'ECMAScript qui supporte les fonctionnalités comme async/await
+    "module": "commonjs",       // Utiliser commonjs pour la compatibilité avec Node.js
+    "outDir": "./dist",         // Spécifier un répertoire de sortie pour les fichiers compilés
+    "rootDir": "./src",         // Spécifier le répertoire racine des fichiers source
+    "strict": true,             // Activer toutes les options strictes
+    "esModuleInterop": true,    // Permet d'importer des modules ES6 dans les fichiers CommonJS
+    "skipLibCheck": true,       // Ignorer la vérification des fichiers de déclaration de bibliothèques
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],      // Inclure tous les fichiers TypeScript du dossier src et sous-dossiers
+  "exclude": ["node_modules"]   // Exclure le dossier node_modules
+}
